@@ -38,7 +38,7 @@ const ChatRoom = ({socket}) => {
                         <span className='my-auto'>Vanish Chat</span>
                      </div>
                      <div>
-                        <button className='btn btn-danger' onClick={()=>{navigate('/')}}>Exit</button>
+                        <button className='btn btn-danger mx-1' onClick={()=>{navigate('/')}}>Exit</button>
                      </div>
                   </div>
                   {/* Messages Container */}
