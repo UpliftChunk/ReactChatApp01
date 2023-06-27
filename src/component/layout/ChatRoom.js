@@ -3,6 +3,7 @@ import GroupIcon from '../../images/ben10Watch.jpeg';
 import {user} from '../Home/Home';
 import ChatBox from '../Message/ChatBox';
 import ReactScrollToBottom from 'react-scroll-to-bottom';
+import { Navigate } from 'react-router-dom';
 
 const ChatRoom = ({socket}) => {
    let sendMessage = ()=>{
@@ -26,7 +27,7 @@ const ChatRoom = ({socket}) => {
             (
                <div className='m-0 w-100 d-flex flex-column flex-grow-1'>
                   {/* Header :has GroupIcon, GroupName */}
-                  <div className='bg-light rounded d-flex text-dark align-items-center fs-5'
+                  <div className='bg-light rounded d-flex text-dark align-items-center justify-content-between fs-5'
                      style={{height:"7vh", fontFamily:"'Montserrat', sans-serif"}}>
                      <div className='mx-2'>
                         <span>
@@ -35,6 +36,9 @@ const ChatRoom = ({socket}) => {
                                  style={{height:"4vh"}}/>
                         </span>
                         <span className='my-auto'>Vanish Chat</span>
+                     </div>
+                     <div>
+                        <button className='btn btn-danger' onClick={()=>{return <Navigate to={`/`}/>}}>Exit</button>
                      </div>
                   </div>
                   {/* Messages Container */}

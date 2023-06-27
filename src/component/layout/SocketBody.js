@@ -3,11 +3,10 @@ import socketIO from 'socket.io-client';
 import {user} from '../Home/Home';
 import { useNavigate } from 'react-router-dom';
 import Rootlayout from './Rootlayout';
-
+//socket host 
 const ENDPOINT = 'http://localhost:4500';
+
 const SocketBody = () => {
-   let socket= socketIO(ENDPOINT, {transports: [`websocket`]});
-   
    const navigate = useNavigate();
    useEffect(()=>{
       const func = async()=>{
@@ -16,6 +15,8 @@ const SocketBody = () => {
       func();
    },[navigate]);
    
+   
+   let socket= socketIO(ENDPOINT, {transports: [`websocket`]});
    useEffect(()=>{
       let id; 
      socket.on('connect', ()=>{
