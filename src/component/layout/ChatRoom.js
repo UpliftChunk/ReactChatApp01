@@ -3,7 +3,7 @@ import GroupIcon from '../../images/ben10Watch.jpeg';
 import {user} from '../Home/Home';
 import ChatBox from '../Message/ChatBox';
 import ReactScrollToBottom from 'react-scroll-to-bottom';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ChatRoom = ({socket}) => {
    let sendMessage = ()=>{
@@ -20,7 +20,7 @@ const ChatRoom = ({socket}) => {
    //    }
    //    func();
    // })
-
+   const navigate = useNavigate();
   return (
       <div className='w-75 h-100 container-fluid d-flex'>
          {user?
@@ -38,7 +38,7 @@ const ChatRoom = ({socket}) => {
                         <span className='my-auto'>Vanish Chat</span>
                      </div>
                      <div>
-                        <button className='btn btn-danger' onClick={()=>{return <Navigate to={`/`}/>}}>Exit</button>
+                        <button className='btn btn-danger' onClick={()=>{navigate('/')}}>Exit</button>
                      </div>
                   </div>
                   {/* Messages Container */}

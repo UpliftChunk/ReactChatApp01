@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className='m-auto h-100'>
       <div className='h-100 d-flex flex-column gap-1 align-items-center justify-content-center'>
-         <div className='fs-3'>
+         <div className='display-2'>
             {/* icon / Logo */}
             Vanish Chat
          </div>
@@ -26,9 +26,9 @@ const Home = () => {
                Chat
             </Link>
          </div>
-         <div>
-            <dt>a OneTime Chat App</dt>
-            <dd>-We Dont store Your Messages</dd>
+         <div className='mt-2 lead fw-normal text-warning'>
+            <dt className='text-center fs-4'>a OneTime Chat App</dt>
+            <dd>We Dont store Your Messages</dd>
          </div>
       </div>
     </div>
