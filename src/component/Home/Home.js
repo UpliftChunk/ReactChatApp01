@@ -14,7 +14,7 @@ const Home = () => {
       <div className='h-100 d-flex flex-column gap-1 align-items-center justify-content-center'>
          <div className='fs-3'>
             {/* icon / Logo */}
-            React Chat
+            Vanish Chat
          </div>
          <div>
             <input type="text" placeholder='Enter Your Name'
@@ -25,6 +25,10 @@ const Home = () => {
                   onClick={(e)=>setLocalUser(e)}>
                Chat
             </Link>
+         </div>
+         <div>
+            <dt>a OneTime Chat App</dt>
+            <dd>-We Dont store Your Messages</dd>
          </div>
       </div>
     </div>

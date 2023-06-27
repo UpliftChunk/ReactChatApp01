@@ -1,11 +1,21 @@
 import React, { useEffect} from 'react';
 import socketIO from 'socket.io-client';
 import {user} from '../Home/Home';
+import { useNavigate } from 'react-router-dom';
 import Rootlayout from './Rootlayout';
 
 const ENDPOINT = 'http://localhost:4500';
 const SocketBody = () => {
    let socket= socketIO(ENDPOINT, {transports: [`websocket`]});
+   
+   const navigate = useNavigate();
+   useEffect(()=>{
+      const func = async()=>{
+         if(!user) return await navigate('/');
+      }
+      func();
+   },[navigate]);
+   
    useEffect(()=>{
       let id; 
      socket.on('connect', ()=>{

@@ -21,7 +21,7 @@ const Rootlayout = ({socket}) => {
           style={{zIndex:3, top:"2vh"}}>
         <button className='rounded-circle bg-warning mx-auto' style={{height:"5vh", width:"5vh"}}
               onClick={()=>{setMenu(!Menu);console.log(Menu)}}
-        >h
+        > <i className="fa-solid fa-bars"></i>
         </button>
       </div>
       <div className='my-2 w-75 container-fluid'

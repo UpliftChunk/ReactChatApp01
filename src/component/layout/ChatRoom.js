@@ -1,21 +1,10 @@
 import React from 'react'
 import GroupIcon from '../../images/ben10Watch.jpeg';
 import {user} from '../Home/Home';
-// import { useNavigate } from 'react-router-dom';
 import ChatBox from '../Message/ChatBox';
 import ReactScrollToBottom from 'react-scroll-to-bottom';
 
 const ChatRoom = ({socket}) => {
-   
-   // const navigate = useNavigate();
-   // socket = socketIO(ENDPOINT, {transports: [`websocket`]});
-   // useEffect(()=>{
-   //    const func = async()=>{
-   //       if(!user) return await navigate('/');
-   //    }
-   //    func();
-   // },[navigate]);
-   // socket
    let sendMessage = ()=>{
       const message = document.getElementById(`MessageInput`).value;
       if(!message) return;
@@ -24,23 +13,10 @@ const ChatRoom = ({socket}) => {
    }
    
    // useEffect(()=>{
-   //    function isInViewport(element) {
-   //       const rect = element.getBoundingClientRect();
-   //       return (
-   //           rect.top >= 0 &&
-   //           rect.left >= 0 &&
-   //           rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-   //           rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-   //       );
-   //   }
-     
    //    let func = async() =>{
    //       const element = document.getElementById('section-1');
-   //       let cond= await isInViewport(element);
-   //       if (!cond) {
-   //          // 👇 Will scroll smoothly to the top of the next section
    //          element.scrollIntoView({ behavior: 'smooth' });
-   //    }}
+   //    }
    //    func();
    // })
 
@@ -58,7 +34,7 @@ const ChatRoom = ({socket}) => {
                                  className='rounded'
                                  style={{height:"4vh"}}/>
                         </span>
-                        <span className='my-auto'> GroupName</span>
+                        <span className='my-auto'>Vanish Chat</span>
                      </div>
                   </div>
                   {/* Messages Container */}
