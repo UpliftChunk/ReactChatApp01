@@ -1,0 +1,33 @@
+.slider{
+   height: 20vh;
+   display: flex;
+   justify-content: center;
+}
+
+.slider>div{
+   height: 15vh;
+   max-width: 12vw;
+   transition: 0.4s ease-in;
+   flex-grow: 1;
+   position: relative;
+   z-index: 2;
+}
+
+.slider>div:hover{
+   background-color: aliceblue;
+   z-index: 3;
+   max-width: 15vw;
+   transform: scale(1.2);
+   flex-grow: 2;
+   height: 16vh;
+}
+
+.Title{
+   font-weight: 600;
+   color: black;
+   text-shadow: 0px 0px 3px rgb(255, 246, 246);;
+   transition: 0.4s ease-in;
+}
+.slider>div:hover .Title{
+   font-size: large;
+}
